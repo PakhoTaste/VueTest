@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="div1">
+			{{5+5}}
+			{{
+				OK?'yes':'no'
+			}}
+			{{
+				str.split('').reverse().join('')
+				
+			}}
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:"#div1",
+			data:{
+				OK:true,
+				str:'一句话'
+				
+			}
+		});
+	</script>
+</html>

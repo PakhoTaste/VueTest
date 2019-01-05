@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="div1">
+			<div v-if="div2">
+				true的话就能看到我啦
+			</div>
+			<div v-if="div3">
+				网易云课程
+			</div>
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:'#div1',
+			data:{
+				div2:true,
+				div3:true
+			}
+		});
+	</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="div1">
+			{{message | toUpper | toDown}}
+			<button v-on:click="do">点我转换</button>
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:"#div1",
+			data:{
+				message:"hello world"
+				
+			},methods:{
+				do : function(){
+					alert(this.message);
+				}
+			},filters:{
+				toUpper : function(str){
+					if(str){
+						var strArr = str.split(" ");
+						var str2 = "";
+						for(var i = 0 ; i < strArr.length ; i++){
+							str2 += strArr[i].charAt(0).toUpperCase() + strArr[i].substring(1);
+							str2 += " ";
+						}
+						if(str2){
+							return str2;
+							
+						}
+					}else{
+						return "";
+					}
+				},
+				toDown : function(str){
+					return str + "123";
+				},
+			}
+			
+			
+		});
+	</script>
+</html>

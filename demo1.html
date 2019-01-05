@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="div1">
+			{{message}}
+		</div>
+		<p id="p1">
+			{{message}}
+		</p>
+		
+	</body>
+	<script>
+		var vd = new Vue({
+			el:'#div1',
+			data:{
+				message:'hello vue',
+				arr:[1,2,3]
+			}
+			
+		});
+		
+		var vp = new Vue({
+			el:'#p1',
+			data:{
+				message:'hello vue'
+			}
+			
+		});
+		
+		alert(vd.arr)
+		
+	</script>
+</html>

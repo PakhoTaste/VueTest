@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="div1">
+			<a v-bind:href="div2">
+				百度传送门
+			</a>
+			<br /><br /><br /><br />
+			<a v-on:click="doing">点我呀</a>
+		</div>
+	</body>
+		<script>
+			new Vue({
+				el:'#div1',
+				data:{
+					div2:'http://www.baidu.com'
+					
+					
+				}
+				
+				
+			});
+			function doing(){
+				alert("123");
+				
+			}
+		</script>
+</html>

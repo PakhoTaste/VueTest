@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="div1">
+			<div>
+				{{div2}}
+			</div>
+			<input v-model="div2" />
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:'#div1',
+			data:{
+				div2:"hello"
+			}
+			
+		});
+	</script>
+</html>

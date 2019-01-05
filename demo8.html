@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+	</head>
+
+	<body>
+		<div id="div1">
+			<div>{{message}}</div>
+
+			<button v-on:click="fanzhuan">反转</button>
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el: "#div1",
+			data: {
+				message: "你想反转我",
+				message2: "好吧你成功了"
+			},
+			methods: {
+				fanzhuan: function() {
+					var temp = this.message;
+					this.message = this.message2;
+					this.message2 = temp;
+
+				}
+
+			}
+
+		})
+	</script>
+
+</html>
