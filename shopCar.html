@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="div1">
+			<table>
+			<ol>
+				<li v-for="(key,value,index) in items">{{key.name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{key.price}}
+					<button id="add" @click="buyOne(value)">+</button>
+				</li>
+				
+			</ol>
+			</table>
+			<div>{{message}} {{total}}</div>
+		</div>
+		<script>
+			new Vue({
+				el:"#div1",
+				data:{
+					items:[
+						{name : "商品1" , price :1},
+						{name : "商品2" , price : 2},
+						{name : "商品3" , price : 3}
+					],
+					total:0,
+					message:"合计："
+				},
+				methods:{
+					buyOne:function(e){
+						debugger;
+						this.total += e+1
+					}
+				}
+				
+			})
+		</script>
+	</body>
+</html>
